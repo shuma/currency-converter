@@ -3,7 +3,7 @@ import { View, Text, Keyboard, Animated, Platform } from 'react-native';
 
 import styles from './styles';
 
-const ANIMATION_DURATION = 250;
+const ANIMATION_DURATION = 160;
 
 export default class Logo extends Component {
   constructor(props) {

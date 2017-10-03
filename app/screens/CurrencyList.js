@@ -22,7 +22,6 @@ export default class CurrencyList extends Component {
               text={item}
               selected={item === TEMP_CURRENT_CURRENCY}
               onPress={this.handlePress}
-              checkmark={false}
             />
           )}
           keyExtractor={item => item}

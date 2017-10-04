@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { ScrollView, StatusBar, Platform } from 'react-native';
+import { ScrollView, StatusBar, Platform, Linking } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
 import { ListItem, Separator } from '../components/List';
@@ -17,8 +17,8 @@ export default class Options extends Component {
   handleThemesPress = () => {
     this.props.navigation.navigate('Themes');
   };
-  handleSitePress = () => {
-    console.log(' press website');
+  handlePressSite = () => {
+    Linking.openURL('http://fixer.io').catch(() => alert('An error occurred.'));
   };
 
   render() {
@@ -35,7 +35,7 @@ export default class Options extends Component {
         <Separator />
         <ListItem
           text="Fixer.io"
-          onPress={this.handleSitePress}
+          onPress={this.handlePressSite}
           customIcon={<Ionicons name={`${ICON_PREFIX}-link`} color={ICON_COLOR} size={ICON_SIZE} />}
         />
         <Separator />
